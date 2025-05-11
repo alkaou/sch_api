@@ -1,0 +1,13 @@
+Flask>=2.3.0
+Flask-RESTx>=0.5.1
+Flask-Mail>=0.9.1
+python-dotenv>=1.0.0
+requests>=2.30.0
+markdown2>=2.4.0
+WeasyPrint>=59.0
+Flask-Cors>=4.0.0
+Flask-Limiter>=3.0.0
+werkzeug>=2.3.0
+gunicorn>=20.1.0
+jinja2>=3.1.0
+google-generativeai>=0.3.0
