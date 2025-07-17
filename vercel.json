@@ -1,44 +1,14 @@
 {
-  "version": 2,
   "builds": [
     {
-      "src": "run.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "50mb",
-        "runtime": "python3.9",
-        "includeFiles": ["build.sh"]
-      }
+      "src": "api/index.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "run.py"
+      "dest": "api/index.py"
     }
-  ],
-  "env": {
-    "FLASK_ENV": "production",
-    "DEBUG": "False",
-    "SECRET_KEY": "@my_flask_secret_key",
-    "MAIL_SERVER": "@my_mail_server",
-    "MAIL_PORT": "@my_mail_port",
-    "MAIL_USE_TLS": "@my_mail_use_tls",
-    "MAIL_USERNAME": "@my_mail_username",
-    "MAIL_PASSWORD": "@my_mail_password",
-    "MAIL_DEFAULT_SENDER": "@my_mail_default_sender",
-    "MY_PROJECT_EMAIL": "@my_project_email",
-    "OPENAI_API_KEY": "@openai_api_key",
-    "GEMINI_API_KEY": "@gemini_api_key",
-    "RATELIMIT_ENABLED": "True",
-    "CORS_ORIGINS": "@my_cors_origins"
-  },
-  "functions": {
-    "run.py": {
-      "prebuilt": false
-    }
-  },
-  "github": {
-    "silent": false
-  }
+  ]
 }
